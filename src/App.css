@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Dark Mode */
+.dark-mode {
+  background-color: #1e1e1e;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dark-mode .editor-container {
+  background: #1e1e1e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dark-mode .editor {
+  background: #2a2a2a;
+}
+
+.dark-mode .output-container {
+  background: #2a2a2a;
+}
+
+/* Light Mode */
+.light-mode {
+  background-color: #f8f9fa;
+  color: black;
+}
+
+.light-mode .editor-container {
+  background: #ffffff;
+}
+
+.light-mode .editor {
+  background: #f0f0f0;
+}
+
+.light-mode .output-container {
+  background: #ffffff;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar h2 {
+  font-size: 18px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-mode, .download-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-mode {
+  background: #ffcc00;
+  color: black;
+}
+
+.download-btn {
+  background: #007bff;
+  color: white;
+}
+
+/* Code Editor Section */
+.editor-container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+}
+
+.editor {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Upload Image Section */
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.image-link {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.image-link input {
+  width: 80%;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+/* Output Section */
+.output-container {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.output-frame {
+  width: 100%;
+  height: 300px;
+  border: none;
+  background: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .editor-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .editor {
+    width: 100%;
+  }
+
+  .output-container {
+    width: 100%;
   }
 }
